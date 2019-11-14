@@ -1,8 +1,13 @@
 .DS_Store
+package-lock.json
 node_modules
+build
+public
 /dist
+/test/unit/coverage/*
 
 # local env files
+.env
 .env.local
 .env.*.local
 
