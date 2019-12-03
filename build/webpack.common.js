@@ -13,19 +13,19 @@ module.exports = {
     module: {
         rules: [
             {
-                    test: /\.vue$/,
-                    loader: 'vue-loader',
-                    options: {
-                        transformAssetUrls: {
-                            video: ['src', 'poster'],
-                            source: 'src',
-                            img: 'src',
-                            image: 'xlink:href'
-                        },
-                        prettify: true,
-                        exposeFilename: false
-                    }
-                },
+                test: /\.vue$/,
+                loader: 'vue-loader',
+                options: {
+                    transformAssetUrls: {
+                        video: ['src', 'poster'],
+                        source: 'src',
+                        img: 'src',
+                        image: 'xlink:href'
+                    },
+                    prettify: true,
+                    exposeFilename: false
+                }
+            },
             {
                 test: /\.js/,  // include .js files
                 exclude: /node_modules/,  // exclude any and all files in the node_modules folder
@@ -37,27 +37,41 @@ module.exports = {
                 ]
             },
             {
-                    test: /\.(s*)[c|a]ss$/,
-                    use: ['style-loader','css-loader', 'sass-loader']
-                },
-                {
-                    test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-                    use: {
-                        loader: 'file-loader',
+                test: /\.s(c|a)ss$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                    {
+                        loader: 'sass-loader',
+                        // Requires sass-loader@^8.0.0
                         options: {
-                            name: '[name].[contenthash].[ext]',
-                            outputPath: 'fonts/'
-                        }
-                    }
-                },
-                {
-                    test: /\.(png|jpg|jpeg|svg|gif)$/,
+                            implementation: require('sass'),
+                            sassOptions: {
+                                fiber: require('fibers'),
+                                indentedSyntax: true // optional
+                            },
+                        },
+                    },
+                ],
+            },
+            {
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                use: {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[contenthash].[ext]',
-                        outputPath: 'images/'
+                        outputPath: 'fonts/'
                     }
                 }
+            },
+            {
+                test: /\.(png|jpg|jpeg|svg|gif)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[contenthash].[ext]',
+                    outputPath: 'images/'
+                }
+            }
         ]
     },
     plugins: [
