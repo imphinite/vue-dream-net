@@ -44,7 +44,7 @@ const configCore = {
     //
     appName: pe.core_appName ?
         pe.core_appName :
-        'A Scrawlr Systems app',
+        'DreamNet',
 
     //
     appDescription: pe.core_appDescription ?
@@ -119,7 +119,7 @@ const configPlugins = {
             true,
         //
         meta: {
-            'scrw:app-release': configCore.appRelease
+            'dnet:app-release': configCore.appRelease
         },
         minify: {
             // more options:
@@ -185,7 +185,7 @@ const configPwa = {
         processBool(pe.pwa_generatePwa) :
         true,
     pwaOptions: {
-        logo: resolveFromRoot('src/assets/logo-white.svg'),
+        logo: resolveFromRoot('src/assets/logo.svg'),
         cache: true,
         prefix: 'favicons/',
         inject: true,
@@ -194,7 +194,7 @@ const configPwa = {
             appName: configCore.appName,
             appDescription: configCore.appDescription,
             version: configCore.appRelease,
-            developerName: 'Scrawlr',
+            developerName: 'DreamNet',
             developerURL: null, // prevent retrieving from the nearest package.json
             background: '#fff',
             theme_color: '#fff',
