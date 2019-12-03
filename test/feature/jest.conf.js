@@ -18,21 +18,21 @@ module.exports = {
         '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest'
     },
     testMatch: [
-        '<rootDir>/test/unit/specs/**/*.spec.js'
+        '<rootDir>/test/feature/specs/**/*.spec.js'
     ],
     snapshotSerializers: [
         '<rootDir>/node_modules/jest-serializer-vue'
     ],
-    setupFiles: ['<rootDir>/test/unit/setup'],
+    setupFiles: [],
+    setupFilesAfterEnv: ['<rootDir>/test/feature/jest.setup.js'],
     coverageDirectory: '<rootDir>/test/_reports',
-    reporters: [
-        "default",
-        "jest-junit"
-    ],
     collectCoverageFrom: [
         'src/**/*.{js,vue}',
         '!src/main.js',
         '!src/router/index.js',
         '!**/node_modules/**'
-    ]
+    ],
+    globals:{
+    },
+    verbose: true,
 }
