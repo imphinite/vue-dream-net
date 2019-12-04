@@ -6,7 +6,7 @@
 export const constantRoutes = [
     {
         path: '/',
-        name: 'homepage',
+        name: 'home',
         meta: {
             public: true,
             transition: 'fade-in-up',

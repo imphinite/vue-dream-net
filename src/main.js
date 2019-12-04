@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
-import router from './router';
+import store from './store/store';
+import router from './router/router';
 import './plugins/vuetify';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
@@ -18,6 +19,7 @@ Object.defineProperty(Vue.prototype, '$progress', {
 new Vue({
     el: '#app',
     router,
+    store,
     components: { App },
     template: '<App/>',
 });

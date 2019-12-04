@@ -2,7 +2,7 @@ import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VuePageTransition from 'vue-page-transition';
-import App from '@/App.vue';
+import App from '@/App';
 
 const localVue = createLocalVue();
 
