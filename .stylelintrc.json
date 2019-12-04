@@ -1,0 +1,114 @@
+{
+    "extends": "stylelint-config-recommended",
+    "plugins": [
+        "stylelint-color-format",
+        "stylelint-no-indistinguishable-colors",
+        "stylelint-no-unsupported-browser-features",
+        "stylelint-order",
+        "stylelint-scss",
+        "stylelint-use-logical"
+    ],
+    "rules": {
+        "at-rule-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "blockless-after-same-name-blockless",
+                    "first-nested"
+                ],
+                "ignore": [
+                    "after-comment"
+                ]
+            }
+        ],
+        "at-rule-name-case": "lower",
+        "at-rule-name-space-after": "always-single-line",
+        "at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": [
+                    "function",
+                    "if",
+                    "each",
+                    "include",
+                    "mixin",
+                    "for"
+                ]
+            }
+        ],
+        "at-rule-name-space-after": "always",
+        "block-closing-brace-newline-after": [
+            "always",
+            {
+                "ignoreAtRules": [
+                    "else",
+                    "if"
+                ]
+            }
+        ],
+        "block-opening-brace-space-before": "always",
+        "color-format/format": {
+            "format": "rgb"
+        },
+        "color-no-hex": true,
+        "color-no-invalid-hex": true,
+        "comment-no-empty": true,
+        "csstools/use-logical": false,
+        "declaration-block-semicolon-space-after": "always-single-line",
+        "declaration-colon-space-after": "always-single-line",
+        "function-name-case": "lower",
+        "indentation": 4,
+        "length-zero-no-unit": true,
+        "max-nesting-depth": 5,
+        "no-descending-specificity": null,
+        "no-extra-semicolons": true,
+        "no-invalid-double-slash-comments": true,
+        "order/order": [
+            "custom-properties",
+            "declarations"
+        ],
+        "order/properties-alphabetical-order": true,
+        "plugin/stylelint-no-indistinguishable-colors": [
+            true,
+            {
+                "threshold": 0,
+                "ignore":["#fff"]
+            }
+        ],
+        "property-case": "lower",
+        "rule-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "first-nested",
+                    "inside-block-and-after-rule"
+                ]
+            }
+        ],
+        "selector-pseudo-class-no-unknown": [true, {
+          "ignorePseudoClasses": ["global"]
+        }],
+        "selector-pseudo-element-no-unknown": [true, {
+          "ignorePseudoElements": ["global"]
+        }],
+        "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
+        "scss/at-else-closing-brace-space-after": "always-intermediate",
+        "scss/at-else-empty-line-before": "never",
+        "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
+        "scss/at-if-closing-brace-space-after": "always-intermediate",
+        "string-quotes": [
+            "single",
+            {
+                "avoidEscape": false
+            }
+        ],
+        "unit-case": "lower",
+        "value-keyword-case": "lower",
+        "value-list-comma-space-after": "always-single-line",
+        "value-no-vendor-prefix": true,
+        "plugin/no-unsupported-browser-features": [true, {
+          "severity": "warning",
+          "ignore": ["css3-cursors"]
+        }]
+    }
+}

@@ -1,0 +1,8 @@
+> 5%
+last 2 versions
+not ie <= 11
+
+## explicitly ignored
+not bb <= 11
+not ie_mob <= 12
+not op_mini all

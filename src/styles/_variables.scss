@@ -1,0 +1,94 @@
+$gutter: 19px;
+$lg-gutter:24px;
+$mobile: 320px;
+$mobile-ls: 568px;
+$tablet: 768px;
+$tablet-ls: 1024px;
+$desktop: 1366px;
+$main-color: rgb(0, 171, 253);
+$theme-color-1: rgb(23, 29, 67);
+$theme-color-2: rgb(12, 4, 251);
+$theme-color-3: rgb(228, 228, 228);
+$theme-color-4: rgb(255, 65, 41);
+$theme-color-5: rgb(250, 250, 251);
+$theme-color-6: rgb(114, 230, 154);
+$light-gray: rgb(216, 216, 222);
+$dark-blue: rgb(23, 29, 67);
+$dark-blue-05: rgba(23, 29, 67, 0.5);
+$primary-blue: rgba(12, 4, 251, 0.08);
+$base-white-07: rgba(250, 250, 251, 0.7);
+$base-white: rgb(250, 250, 251);
+$divider-blue: rgb(51, 56, 89);
+$xlight-gray: rgb(228, 228, 228);
+$primary-font: Montserrat;
+$secondary-font: 'Source Sans Pro';
+$colors: (
+    black: (
+        high: rgb(0, 0, 0),
+        med: rgba(0, 0, 0, 0.7),
+        low: rgba(0, 0, 0, 0.5),
+    ),
+    white: (
+        high: rgb(255, 255, 255),
+        med: rgba(255, 255, 255, 0.7),
+        low: rgba(255, 255, 255, 0.5),
+    ),
+    dark-blue: (
+        high: rgb(23, 29, 67),
+        med: rgba(23, 29, 67, 0.7),
+        low: rgba(23, 29, 67, 0.5),
+    ),
+    divider-blue: (
+        high: rgb(51, 56, 89),
+        med: rgba(51, 56, 89, 0.7),
+        low: rgba(51, 56, 89, 0.5),
+    ),
+    primary-blue: (
+        high: rgb(12, 4, 251),
+        med: rgba(12, 4, 251, 0.7),
+        low: rgba(12, 4, 251, 0.5),
+    ),
+    base-white: (
+        high: rgb(250, 250, 251),
+        med: rgba(250, 250, 251, 0.7),
+        low: rgba(250, 250, 251, 0.5),
+    ),
+    light-gray: (
+        high: rgb(216, 216, 222),
+        med: rgba(216, 216, 222, 0.7),
+        low: rgba(216, 216, 222, 0.5),
+    ),
+    xlight-gray: (
+        high: rgb(228, 228, 228),
+        med: rgba(228, 228, 228, 0.7),
+        low: rgba(228, 228, 228, 0.5),
+    ),
+    success-green: (
+        high: rgb(114, 230, 154),
+        med: rgba(114, 230, 154, 0.7),
+        low: rgba(114, 230, 154, 0.5),
+    ),
+    secondary-red: (
+        high: rgb(255, 65, 41),
+        med: rgba(255, 65, 41, 0.7),
+        low: rgba(255, 65, 41, 0.5),
+    )
+
+);
+$spacing: (
+    m:'m',
+    mt:'mt',
+    mb:'mb',
+    ml:'ml',
+    mr:'mr',
+    mx:'mx',
+    my:'my',
+    p:'p',
+    pt:'pt',
+    pb:'pb',
+    pl:'pl',
+    pr:'pr',
+    px:'px',
+    py:'py',
+);
+$login-bg-img: 'https://c.pxhere.com/photos/ed/83/book_pen_writing_paper_table-101800.jpg!d';

@@ -1,8 +1,8 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
 import Vuetify from 'vuetify';
+// import FormGroup from '@/components/FormGroup.vue';
 
-Vue.use(Vuex);
 Vue.use(Vuetify);
+// Vue.component('FormGroup', FormGroup);
 
 Vue.config.productionTip = true;

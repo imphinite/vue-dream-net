@@ -1,0 +1,8 @@
+/dist/
+/*.js
+/test/unit/coverage/
+/build/build.js
+/build/config.js
+/build/utils.js
+/build/webpack.*.conf.js
+/build/scripts/*.js
