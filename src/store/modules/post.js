@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import axios from 'axios';
 
 const namespaced = true;
 const namespace = 'post';
@@ -11,8 +12,22 @@ const getters = {};
 
 const actions = {
     showPostForm ({ commit }) {
-        console.log('hello?>?')
         commit('SET_POST_FORM_ACTIVE', true);
+    },
+    createDreamPost ({ commit }, { content }) {
+        return new Promise((resolve, reject) => {
+            const baseAPI = process.env.BASE_API;
+            const params = {
+                content
+            };
+
+            axios.post(`${baseAPI}/posts`, params).then(response => {
+                console.log(response);
+                resolve(response);
+            }).catch(err => {
+                reject(err);
+            })
+        })
     }
 };
 
