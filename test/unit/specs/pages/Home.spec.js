@@ -1,18 +1,18 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import HelloWorld from '@/pages/HelloWorld';
+import Home from '@/pages/Home';
 
 const localVue = createLocalVue();
 
-describe('HelloWorld.vue', () => {
+describe('Home.vue', () => {
     let wrapper;
 
     beforeEach(() => {
-        wrapper = shallowMount(HelloWorld, {
+        wrapper = shallowMount(Home, {
             localVue
         });
     });
 
-    test('HelloWorld is a Vue instance', () => {
+    test('Home is a Vue instance', () => {
         expect(wrapper.isVueInstance()).toBeTruthy();
     });
 })
