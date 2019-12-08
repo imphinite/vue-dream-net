@@ -33,5 +33,30 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: npm run unit
+      - run:
+          name: Configure .env
+          command: |
+              cp .env.example .env
+
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+
+      - run:
+          name: Project unit testing
+          command: |
+            ./cc-test-reporter before-build
+            npm run unit
+            ./cc-test-reporter format-coverage -t lcov test/_reports/lcov.info
+            ./cc-test-reporter upload-coverage
+          environment:
+            JEST_JUNIT_OUTPUT: "~/project/test/_reports/js-test-results.xml"
+
+      - store_test_results:
+          path: ~/project/test/_reports
+
+      - store_artifacts:
+          path: /root/.npm/_logs
+          destination: npm
