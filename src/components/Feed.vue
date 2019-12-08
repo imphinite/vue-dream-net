@@ -1,10 +1,14 @@
 <template>
     <v-card>
-        <v-list v-if="feed.data" two-line>
+        <v-list
+            v-if="feed.data"
+            two-line
+            class="feed-container"
+        >
             <template v-for="(post, index) in feed.data">
                 <Post
-                    :key="index"
                     :id="post.id"
+                    :key="index"
                     :content="post.content"
                     :author="post.author.data"
                     :date="post.date"
@@ -23,11 +27,6 @@ export default {
     components: {
         Post
     },
-    data () {
-        return {
-            subheader: 'Today'
-        }
-    },
     computed: {
         ...mapState(['feed'])
     },
@@ -37,7 +36,13 @@ export default {
     methods: {
         ...mapActions('feed', [
             'getDreamPosts'
-        ])
+        ]),
     }
 }
 </script>
+
+<style scoped>
+.feed-container {
+    background-color: #616161;
+}
+</style>

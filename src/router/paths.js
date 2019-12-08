@@ -14,7 +14,20 @@ export const constantRoutes = [
         component: () => import(
             /* webpackChunkName: "routes" */
             /* webpackMode: "lazy" */
-            '@/pages/HelloWorld'
+            '@/pages/Home'
+        )
+    },
+    {
+        path: '/create-post',
+        name: 'createPostPage',
+        meta: {
+            public: true,
+            transition: 'fade-in-up',
+        },
+        component: () => import(
+            /* webpackChunkName: "routes" */
+            /* webpackMode: "lazy" */
+            '@/pages/CreatePost'
         )
     },
     {

@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import feed from './modules/feed';
 import navigation from './modules/navigation';
 import search from './modules/search';
+import post from './modules/post';
 
 Vue.use(Vuex);
 
@@ -16,7 +17,8 @@ const store = new Vuex.Store({
     modules: {
         feed,
         navigation,
-        search
+        search,
+        post
     }
 });
 
