@@ -1,27 +1,14 @@
 <template>
-    <v-card dark>
-        <v-list two-line>
-            <v-subheader
-                v-if="subheader"
-                :key="subheader"
-            >
-                {{ subheader }}
-            </v-subheader>
+    <v-card>
+        <v-list v-if="feed.data" two-line>
             <template v-for="(post, index) in feed.data">
-                <v-list-tile
+                <Post
                     :key="index"
-                    avatar
-                >
-                    <v-list-tile-avatar>
-                        <img :src="imageSrc(post.id)">
-                    </v-list-tile-avatar>
-
-                    <v-list-tile-content>
-                        <v-list-tile-title v-html="post.content" />
-                        <v-list-tile-sub-title v-html="post.subtitle" />
-                    </v-list-tile-content>
-                    <v-divider :inset="true" />
-                </v-list-tile>
+                    :id="post.id"
+                    :content="post.content"
+                    :author="post.author.data"
+                    :date="post.date"
+                />
             </template>
         </v-list>
     </v-card>
@@ -29,9 +16,13 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import Post from '@/components/Post';
 
 export default {
     name: 'Feed',
+    components: {
+        Post
+    },
     data () {
         return {
             subheader: 'Today'
@@ -46,10 +37,7 @@ export default {
     methods: {
         ...mapActions('feed', [
             'getDreamPosts'
-        ]),
-        imageSrc (id) {
-            return `https://i.pravatar.cc/300?u=${id}`;
-        }
+        ])
     }
 }
 </script>

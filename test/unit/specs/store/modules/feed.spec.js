@@ -18,9 +18,11 @@ describe('modules/feed', () => {
 
         test('actions.getDreamPosts', async () => {
             const baseAPI = process.env.BASE_API;
-            moxios.stubRequest(`${baseAPI}/users/1/posts`, {
+            moxios.stubRequest(`${baseAPI}/posts`, {
                 status: 200,
-                response: [{}, {}]
+                response: {
+                    data: [{}, {}]
+                }
             });
             await actions.getDreamPosts({ commit });
             expect(commit).toHaveBeenCalledWith('SET_DREAM_POSTS', [{}, {}]);

@@ -40,10 +40,4 @@ describe('Feed.vue', () => {
     test('mounted() calls feed.getDreamPosts()', () => {
         expect(feedModule.actions.getDreamPosts).toHaveBeenCalled();
     });
-
-    test('methods.imageSrc', () => {
-        const id = 'anId';
-        const src = wrapper.vm.imageSrc(id);
-        expect(src).toBe('https://i.pravatar.cc/300?u=anId');
-    });
-})
+});

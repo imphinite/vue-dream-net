@@ -46,7 +46,6 @@ describe('examples', () => {
         let loginModalTitleText;
 
         try {
-            // Navigate to the Scrawlr site
             await browser.url('http://localhost:8080/');
 
             await browser.pause(500);

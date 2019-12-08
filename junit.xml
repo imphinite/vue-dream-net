@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="10" failures="0" time="3.789">
-  <testsuite name="modules/navigation" errors="0" failures="0" skipped="0" timestamp="2019-12-04T08:43:11" time="1.081" tests="2">
-    <testcase classname="modules/navigation actions actions.toggleDrawer" name="modules/navigation actions actions.toggleDrawer" time="0.003">
+<testsuites name="jest tests" tests="9" failures="0" time="3.655">
+  <testsuite name="modules/feed" errors="0" failures="0" skipped="0" timestamp="2019-12-08T02:14:13" time="1.368" tests="3">
+    <testcase classname="modules/feed actions actions.getDreamPosts" name="modules/feed actions actions.getDreamPosts" time="0.031">
     </testcase>
-    <testcase classname="modules/navigation mutations mutations.SET_DRAWER_ACTIVE" name="modules/navigation mutations mutations.SET_DRAWER_ACTIVE" time="0.001">
+    <testcase classname="modules/feed mutations mutations.SET_DREAM_POSTS" name="modules/feed mutations mutations.SET_DREAM_POSTS" time="0">
     </testcase>
-  </testsuite>
-  <testsuite name="modules/feed" errors="0" failures="0" skipped="0" timestamp="2019-12-04T08:43:12" time="0.529" tests="3">
-    <testcase classname="modules/feed actions actions.getDreamPosts" name="modules/feed actions actions.getDreamPosts" time="0.028">
-    </testcase>
-    <testcase classname="modules/feed mutations mutations.SET_DREAM_POSTS" name="modules/feed mutations mutations.SET_DREAM_POSTS" time="0.001">
-    </testcase>
-    <testcase classname="modules/feed mutations mutations.SET_PAGINATION" name="modules/feed mutations mutations.SET_PAGINATION" time="0">
+    <testcase classname="modules/feed mutations mutations.SET_PAGINATION" name="modules/feed mutations mutations.SET_PAGINATION" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="App.vue" errors="0" failures="0" skipped="0" timestamp="2019-12-04T08:43:13" time="0.25" tests="1">
-    <testcase classname="App.vue App is a Vue instance" name="App.vue App is a Vue instance" time="0.013">
-    </testcase>
-  </testsuite>
-  <testsuite name="Feed.vue" errors="0" failures="0" skipped="0" timestamp="2019-12-04T08:43:13" time="0.112" tests="3">
-    <testcase classname="Feed.vue Feed is a Vue instance" name="Feed.vue Feed is a Vue instance" time="0.007">
+  <testsuite name="Feed.vue" errors="0" failures="0" skipped="0" timestamp="2019-12-08T02:14:15" time="0.239" tests="2">
+    <testcase classname="Feed.vue Feed is a Vue instance" name="Feed.vue Feed is a Vue instance" time="0.012">
     </testcase>
     <testcase classname="Feed.vue mounted() calls feed.getDreamPosts()" name="Feed.vue mounted() calls feed.getDreamPosts()" time="0.003">
     </testcase>
-    <testcase classname="Feed.vue methods.imageSrc" name="Feed.vue methods.imageSrc" time="0.004">
+  </testsuite>
+  <testsuite name="App.vue" errors="0" failures="0" skipped="0" timestamp="2019-12-08T02:14:15" time="0.118" tests="1">
+    <testcase classname="App.vue App is a Vue instance" name="App.vue App is a Vue instance" time="0.006">
     </testcase>
   </testsuite>
-  <testsuite name="HelloWorld.vue" errors="0" failures="0" skipped="0" timestamp="2019-12-04T08:43:13" time="0.094" tests="1">
+  <testsuite name="modules/navigation" errors="0" failures="0" skipped="0" timestamp="2019-12-08T02:14:15" time="0.092" tests="2">
+    <testcase classname="modules/navigation actions actions.toggleDrawer" name="modules/navigation actions actions.toggleDrawer" time="0.001">
+    </testcase>
+    <testcase classname="modules/navigation mutations mutations.SET_DRAWER_ACTIVE" name="modules/navigation mutations mutations.SET_DRAWER_ACTIVE" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="HelloWorld.vue" errors="0" failures="0" skipped="0" timestamp="2019-12-08T02:14:15" time="0.097" tests="1">
     <testcase classname="HelloWorld.vue HelloWorld is a Vue instance" name="HelloWorld.vue HelloWorld is a Vue instance" time="0.002">
     </testcase>
   </testsuite>
