@@ -35,7 +35,7 @@ export default {
             'showPostForm'
         ]),
         handleShowPostForm () {
-            this.$router.push(`/create-post`);
+            this.$router.push('/create-post');
         }
     },
 };

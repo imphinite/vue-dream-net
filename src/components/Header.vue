@@ -6,7 +6,9 @@
         <v-toolbar-side-icon @click.stop="toggleDrawer" />
         <Search v-show="search.active" />
 
-        <v-toolbar-title v-show="!search.active">DreamNet</v-toolbar-title>
+        <v-toolbar-title v-show="!search.active">
+            DreamNet
+        </v-toolbar-title>
         <v-spacer v-show="!search.active" />
 
         <v-toolbar-items>
@@ -14,8 +16,12 @@
                 icon
                 @click.stop="toggleSearchInput"
             >
-                <v-icon v-if="!search.active">search</v-icon>
-                <v-icon v-else>close</v-icon>
+                <v-icon v-if="!search.active">
+                    search
+                </v-icon>
+                <v-icon v-else>
+                    close
+                </v-icon>
             </v-btn>
         </v-toolbar-items>
     </v-toolbar>

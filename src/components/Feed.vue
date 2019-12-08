@@ -7,8 +7,8 @@
         >
             <template v-for="(post, index) in feed.data">
                 <Post
-                    :key="index"
                     :id="post.id"
+                    :key="index"
                     :content="post.content"
                     :author="post.author.data"
                     :date="post.date"

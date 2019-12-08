@@ -6,7 +6,11 @@
             max-width="600"
         >
             <v-card-title class="post-title">
-                <v-flex xs5 offset-xs7 align-end>
+                <v-flex
+                    xs5
+                    offset-xs7
+                    align-end
+                >
                     <v-icon>gesture</v-icon>
                     <span class="font-weight-light">{{ date }}</span>
                 </v-flex>
@@ -19,10 +23,10 @@
             <v-card-actions>
                 <v-list-tile class="grow">
                     <v-list-tile-avatar color="grey darken-3">
-                    <v-img
-                        class="elevation-6"
-                        :src="imageSrc"
-                    ></v-img>
+                        <v-img
+                            class="elevation-6"
+                            :src="imageSrc"
+                        />
                     </v-list-tile-avatar>
 
                     <v-list-tile-content>
@@ -33,10 +37,14 @@
                         align-center
                         justify-end
                     >
-                        <v-icon class="mr-1">favorite_border</v-icon>
+                        <v-icon class="mr-1">
+                            favorite_border
+                        </v-icon>
                         <span class="subheading mr-2">256</span>
                         <span class="mr-1">·</span>
-                        <v-icon class="mr-1">share</v-icon>
+                        <v-icon class="mr-1">
+                            share
+                        </v-icon>
                         <span class="subheading">45</span>
                     </v-layout>
                 </v-list-tile>
@@ -62,7 +70,7 @@ export default {
             default: () => {
                 return {
                     name: 'anonymous',
-                    avatar: `https://i.pravatar.cc/300?u=anonymous@dnet.com`
+                    avatar: 'https://i.pravatar.cc/300?u=anonymous@dnet.com'
                 }
             }
         },
