@@ -5,6 +5,8 @@
 version: 2
 jobs:
   build:
+    environment:
+      CC_TEST_REPORTER_ID: ${CC_TEST_REPORTER_ID}
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
@@ -13,7 +15,6 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
-
     working_directory: ~/repo
 
     steps:
