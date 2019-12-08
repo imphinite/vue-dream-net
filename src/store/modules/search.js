@@ -11,7 +11,6 @@ const getters = {};
 
 const actions = {
     toggleSearchInput ({ commit }) {
-        console.log('search')
         commit('SET_SEARCH_INPUT', !state.active);
     }
 };

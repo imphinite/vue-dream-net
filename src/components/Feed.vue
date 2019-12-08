@@ -1,19 +1,13 @@
 <template>
     <v-card>
-        <v-subheader
-            v-if="subheader"
-            :key="subheader"
-        >
-            {{ subheader }}
-        </v-subheader>
         <v-list v-if="feed.data" two-line>
             <template v-for="(post, index) in feed.data">
                 <Post
                     :key="index"
                     :id="post.id"
                     :content="post.content"
-                    :author="post.author"
-                    :date="post.created_at"
+                    :author="post.author.data"
+                    :date="post.date"
                 />
             </template>
         </v-list>

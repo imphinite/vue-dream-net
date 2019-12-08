@@ -21,8 +21,8 @@ const actions = {
     getDreamPosts ({ commit }) {
         return new Promise((resolve, reject) => {
             const baseAPI = process.env.BASE_API;
-            axios.get(`${baseAPI}/users/1/posts`).then(response => {
-                const { data } = response;
+            axios.get(`${baseAPI}/posts`).then(response => {
+                const { data } = response.data;
                 commit('SET_DREAM_POSTS', data);
                 resolve(data);
             }).catch(err => {
