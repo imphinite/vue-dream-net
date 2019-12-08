@@ -10,17 +10,9 @@
 </template>
 
 <script>
-import Header from '@/components/Header';
-import NavDrawer from '@/components/NavDrawer';
-import Feed from '@/components/Feed';
 
 export default {
     name: 'App',
-    components: {
-        Header,
-        NavDrawer,
-        Feed
-    },
     watch: {
         $route: function (to, from) {
             // TODO solidify transition logic and
