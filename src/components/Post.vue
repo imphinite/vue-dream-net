@@ -5,8 +5,8 @@
             dark
             max-width="600"
         >
-            <v-card-title class="p-0">
-                <v-flex xs4 offset-xs8 align-end>
+            <v-card-title class="post-title">
+                <v-flex xs5 offset-xs7 align-end>
                     <v-icon>gesture</v-icon>
                     <span class="font-weight-light">{{ date }}</span>
                 </v-flex>
@@ -80,7 +80,10 @@ export default {
 </script>
 
 <style scoped>
-.p-0 {
+.post-title {
     padding: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+    text-align: right;
 }
 </style>

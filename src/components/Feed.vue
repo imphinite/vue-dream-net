@@ -1,6 +1,10 @@
 <template>
     <v-card>
-        <v-list v-if="feed.data" two-line>
+        <v-list
+            v-if="feed.data"
+            two-line
+            class="feed-container"
+        >
             <template v-for="(post, index) in feed.data">
                 <Post
                     :key="index"
@@ -11,6 +15,14 @@
                 />
             </template>
         </v-list>
+        <v-btn
+            class="create-dream-post-btn"
+            dark
+            fab
+            @click="showPostForm"
+        >
+            <v-icon>add</v-icon>
+        </v-btn>
     </v-card>
 </template>
 
@@ -37,7 +49,22 @@ export default {
     methods: {
         ...mapActions('feed', [
             'getDreamPosts'
+        ]),
+        ...mapActions('post', [
+            'showPostForm'
         ])
     }
 }
 </script>
+
+<style scoped>
+.feed-container {
+    background-color: #616161;
+}
+.create-dream-post-btn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99;
+}
+</style>
