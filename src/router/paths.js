@@ -14,7 +14,7 @@ export const constantRoutes = [
         component: () => import(
             /* webpackChunkName: "routes" */
             /* webpackMode: "lazy" */
-            '@/pages/HelloWorld'
+            '@/pages/Home'
         )
     },
     {
