@@ -20,15 +20,16 @@
             class="pt-0"
         >
             <v-list-tile
-                v-for="item in items"
-                :key="item.title"
+                v-for="page in pages"
+                :key="page.title"
+                @click="handleRouting(page.path)"
             >
                 <v-list-tile-action>
-                    <v-icon>{{ item.icon }}</v-icon>
+                    <v-icon>{{ page.icon }}</v-icon>
                 </v-list-tile-action>
 
                 <v-list-tile-content>
-                    <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                    <v-list-tile-title>{{ page.title }}</v-list-tile-title>
                 </v-list-tile-content>
             </v-list-tile>
         </v-list>
@@ -36,20 +37,29 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
     name: 'NavDrawer',
     data () {
         return {
-            items: [
-                { title: 'Home', icon: 'dashboard' },
-                { title: 'About', icon: 'question_answer' }
+            pages: [
+                { title: 'Home', icon: 'dashboard', path: '/' },
+                { title: 'About', icon: 'question_answer', path: '/about' }
             ]
         }
     },
     computed: {
         ...mapState(['navigation'])
+    },
+    methods: {
+        ...mapActions('navigation', [
+            'toggleDrawer'
+        ]),
+        handleRouting (path) {
+            this.toggleDrawer();
+            this.$router.push(path);
+        }
     }
 }
 </script>

@@ -11,6 +11,7 @@ const getters = {};
 
 const actions = {
     showPostForm ({ commit }) {
+        console.log('hello?>?')
         commit('SET_POST_FORM_ACTIVE', true);
     }
 };

@@ -18,6 +18,19 @@ export const constantRoutes = [
         )
     },
     {
+        path: '/create-post',
+        name: 'createPostPage',
+        meta: {
+            public: true,
+            transition: 'fade-in-up',
+        },
+        component: () => import(
+            /* webpackChunkName: "routes" */
+            /* webpackMode: "lazy" */
+            '@/pages/CreatePost'
+        )
+    },
+    {
         path: '/403',
         name: 'statusPage403',
         meta: {

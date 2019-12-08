@@ -15,14 +15,6 @@
                 />
             </template>
         </v-list>
-        <v-btn
-            class="create-dream-post-btn"
-            dark
-            fab
-            @click="showPostForm"
-        >
-            <v-icon>add</v-icon>
-        </v-btn>
     </v-card>
 </template>
 
@@ -35,11 +27,6 @@ export default {
     components: {
         Post
     },
-    data () {
-        return {
-            subheader: 'Today'
-        }
-    },
     computed: {
         ...mapState(['feed'])
     },
@@ -50,9 +37,6 @@ export default {
         ...mapActions('feed', [
             'getDreamPosts'
         ]),
-        ...mapActions('post', [
-            'showPostForm'
-        ])
     }
 }
 </script>
@@ -60,11 +44,5 @@ export default {
 <style scoped>
 .feed-container {
     background-color: #616161;
-}
-.create-dream-post-btn {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    z-index: 99;
 }
 </style>
